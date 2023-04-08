@@ -76,16 +76,16 @@ def main():
 
     input_sms=st.text_area("**Enter the message for testing**")
 
-    # 1) sms transformation 
+    # sms transformation 
     input_sms=transform_sms(input_sms)
 
-    # 2) tfidf vectorizzer
+    # tfidf vectorizzer
     input_sms=load_tfidf.transform([input_sms])
 
-    # 3) prediction using model
+    # prediction using model
     pred=load_model_mnb.predict(input_sms)[0]
 
-    # 4) button for prediction
+    # button for prediction
     if st.button("Predict"):
         if pred == 1:
             st.success("**Spam sms **💬 ")
