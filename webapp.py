@@ -3,6 +3,8 @@ import pickle
 import streamlit as st
 import string
 import nltk
+nltk.download('punkt')
+nltk.download('wordnet')
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 ps=PorterStemmer()
